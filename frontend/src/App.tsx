@@ -1,11 +1,12 @@
 import React from "react";
-import Feed from "./pages/Feed";
+import { BrowserRouter as Router } from "react-router-dom";
+import Routes from "./routes";
 
 function App() {
   return (
-    <div>
-      <Feed />
-    </div>
+    <Router>
+      <Routes />
+    </Router>
   );
 }
 
