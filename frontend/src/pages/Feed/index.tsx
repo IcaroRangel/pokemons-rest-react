@@ -21,6 +21,16 @@ const Feed = () => {
   React.useEffect(() => {
     loadPokemons();
   }, [loadPokemons]);
+
+  const deletePokemon = React.useCallback(
+    async (id: number) => {
+      await api.delete(`/${id}`);
+      const deletedPoke = pokemons.filter((poke) => poke.id !== id);
+      setPokemons([...deletedPoke]);
+    },
+    [pokemons, setPokemons]
+  );
+
   return (
     <Container>
       <h1>Pokemóns</h1>
@@ -31,6 +41,9 @@ const Feed = () => {
         <div>
           <h3>{pokemon.name}</h3>
           <span>Tipo: {pokemon.element}</span>
+          <button onClick={() => deletePokemon(pokemon.id)}>
+            Deletar pokemón
+          </button>
         </div>
       ))}
     </Container>
