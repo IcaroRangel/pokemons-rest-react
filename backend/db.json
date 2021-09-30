@@ -1,0 +1,14 @@
+{
+  "pokemons": [
+    {
+      "name": "Ivysaur",
+      "element": "grass / poison",
+      "id": 1
+    },
+    {
+      "name": "Pikachu",
+      "element": "electric",
+      "id": 2
+    }
+  ]
+}
