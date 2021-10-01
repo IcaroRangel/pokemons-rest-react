@@ -44,6 +44,9 @@ const Feed = () => {
           <button onClick={() => deletePokemon(pokemon.id)}>
             Deletar pokémon
           </button>
+          <Link to={`/updatePoke/${pokemon.id}`}>
+            <button>Editar pokémon</button>
+          </Link>
         </div>
       ))}
     </Container>
