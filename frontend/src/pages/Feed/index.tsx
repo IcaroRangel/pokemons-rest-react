@@ -33,7 +33,7 @@ const Feed = () => {
 
   return (
     <Container>
-      <h1>Pokemóns</h1>
+      <h1>Pokémons</h1>
       <Link to="/newPoke">
         <button>Adicionar pokémon</button>
       </Link>
@@ -42,7 +42,7 @@ const Feed = () => {
           <h3>{pokemon.name}</h3>
           <span>Tipo: {pokemon.element}</span>
           <button onClick={() => deletePokemon(pokemon.id)}>
-            Deletar pokemón
+            Deletar pokémon
           </button>
         </div>
       ))}
